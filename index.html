@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+
+    <title>SNIKERS</title>
+  </head>
+  <body>
+    <div class="overlay hidden"></div>
+    <div class="side-bar hidden">
+      <ion-icon class="close-sidebar" name="close-outline"></ion-icon>
+      <ul class="main-nav-list">
+        <li><a href="#" class="main-nav-link">Collections </a></li>
+        <li><a href="#" class="main-nav-link">Men </a></li>
+        <li><a href="#" class="main-nav-link">Women </a></li>
+        <li><a href="#" class="main-nav-link">About </a></li>
+        <li><a href="#" class="main-nav-link">Contact </a></li>
+      </ul>
+    </div>
+    <div class="hero-modal hidden">
+      <div class="modal-container">
+        <div class="main-img">
+          <ion-icon class="close-modal btn-icon" name="close-outline"></ion-icon>
+          <img class="hero-main-modal-img" src="images/image-product-1.jpg" alt="Main modal image" />
+          <button type="button" class="btn--left">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 btn-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <button type="button" class="btn--right">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 btn-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+        <ul class="thumbnails-list">
+          <li class="hero-modal-img border">
+            <img class="modal-thumb-img selected" src="/images/image-product-1-thumbnail.jpg" alt="A pair of sneakers" />
+          </li>
+          <li class="hero-modal-img">
+            <img class="modal-thumb-img" src="/images/image-product-2-thumbnail.jpg" alt="A pair of sneakers" />
+          </li>
+          <li class="hero-modal-img">
+            <img class="modal-thumb-img" src="/images/image-product-3-thumbnail.jpg" alt="A pair of sneakers" />
+          </li>
+          <li class="hero-modal-img">
+            <img class="modal-thumb-img" src="/images/image-product-4-thumbnail.jpg" alt="A pair of sneakers" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <header class="header">
+        <ion-icon name="menu-outline" class="popup-menu side-bar-btn"></ion-icon>
+        <a href="#" class="logo">
+          <img class="logo" src="./images/logo.svg" alt="Logo of the webpage" />
+        </a>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li><a href="#" class="main-nav-link">Collections </a></li>
+            <li><a href="#" class="main-nav-link">Men </a></li>
+            <li><a href="#" class="main-nav-link">Women </a></li>
+            <li><a href="#" class="main-nav-link">About </a></li>
+            <li><a href="#" class="main-nav-link">Contact </a></li>
+          </ul>
+        </nav>
+
+        <div class="shop-now">
+          <a href="#" class="nav-cart show-popup">
+            <img alt="Cart image" class="cart" src="./images/icon-cart.svg" />
+            <span class="count" id="count">0</span>
+          </a>
+
+          <div class="nav-profile">
+            <img alt="Your profile picture" class="profile show-popup" src="./images/image-avatar.png" />
+            <div class="cart-item--popup hidden">
+              <div class="popup-container">
+                <p class="popup-title">Cart</p>
+                <div class="cart-items--list">
+                  <p class="list-empty">Your cart is empty.</p>
+                  <div class="cart-list hidden">
+                    <div class="cart-item">
+                      <img src="./images/image-product-1-thumbnail.jpg" alt="Selected sneakers" class="cart-item--img" />
+                      <div class="cart-item--info">
+                        <p class="item-name">Fall Limited Edition Sneakers</p>
+                        <p class="item-price"><span id="item-price"></span> <strong id="total-price"></strong></p>
+                      </div>
+                      <ion-icon class="cart-item--delete" name="trash"></ion-icon>
+                    </div>
+                  </div>
+                  <button type="button" class="btn check-out">Checkout</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <main>
+      <section class="section-hero container">
+        <div class="hero-img-box">
+          <img class="hero-main-img show-modal" src="/images/image-product-1.jpg" alt="A pair of sneakers" />
+          <ul>
+            <li class="hero-option-img border">
+              <img class="hero-thumb-img selected" src="/images/image-product-1-thumbnail.jpg" alt="A pair of sneakers" />
+            </li>
+            <li class="hero-option-img">
+              <img class="hero-thumb-img" src="/images/image-product-2-thumbnail.jpg" alt="A pair of sneakers" />
+            </li>
+            <li class="hero-option-img">
+              <img class="hero-thumb-img" src="/images/image-product-3-thumbnail.jpg" alt="A pair of sneakers" />
+            </li>
+            <li class="hero-option-img">
+              <img class="hero-thumb-img" src="/images/image-product-4-thumbnail.jpg" alt="A pair of sneakers" />
+            </li>
+          </ul>
+        </div>
+        <div class="hero-text-box">
+          <p class="hero-sub-header">Sneaker company</p>
+          <h1 class="heading-primary">Fall Limited Edition Sneakers</h1>
+          <p class="hero-description">These low-profile sneaker are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything weather can offer.</p>
+          <div class="hero-pricing-box">
+            <p class="price">
+              $125.00
+              <span class="price-discount">50%</span>
+            </p>
+            <p class="discount">$250.00</p>
+          </div>
+          <div class="hero-btns">
+            <button type="button" class="increate">
+              <span class="minus">&minus;</span>
+              <span id="count-of-added">0</span>
+              <span class="plus">&plus;</span>
+            </button>
+            <button type="button" class="btn add-to-cart"><ion-icon class="cart" name="cart-outline"></ion-icon> Add to cart</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
