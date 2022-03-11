@@ -1,0 +1,292 @@
+/*
+ BELOW 1200px (Landscape Tablets)
+*/
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+
+  .popup-menu {
+    display: none;
+  }
+
+  .main-nav-list {
+    font-size: 1.8rem;
+  }
+
+  .count {
+    font-size: 1.2rem;
+  }
+
+  .popup-title {
+    font-size: 1.6rem;
+  }
+
+  .cart-item--info {
+    font-size: 1.4rem;
+  }
+
+  .cart-item--delete {
+    font-size: 2rem;
+  }
+
+  .list-empty {
+    font-size: 1.6rem;
+  }
+}
+
+/*
+BELOW 944px (Tablets)
+*/
+
+@media (max-width: 59em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 50%;
+  }
+
+  .show-modal {
+    pointer-events: none;
+  }
+
+  .side-bar {
+    position: absolute;
+    height: 100%;
+    width: 30vw;
+    background-color: #fff;
+    z-index: 99999;
+    padding: 2.4rem;
+  }
+
+  .close-sidebar {
+    font-size: 3.2rem;
+    padding-bottom: 4.4rem;
+    font-weight: 700;
+  }
+
+  .main-nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+
+  .popup-menu {
+    display: flex;
+    font-size: 3.2rem;
+  }
+
+  .header {
+    padding: 1.2rem 0.1rem;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .section-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-main-img {
+    width: 80rem;
+    height: 80rem;
+  }
+
+  .hero-img-box ul {
+    gap: 2.4rem;
+  }
+
+  .hero-thumb-img,
+  .modal-thumb-img {
+    width: 18rem;
+    margin-bottom: -5px;
+  }
+
+  .hero-text-box {
+    width: 90%;
+  }
+
+  .cart-item--popup {
+    transform: translate(-85%, 1rem);
+  }
+}
+
+/*
+BELOW 544px (Phones)
+*/
+
+@media (max-width: 34em) {
+  .side-bar {
+    position: absolute;
+    height: 100%;
+    width: 70vw;
+    background-color: #fff;
+    z-index: 99999;
+    padding: 2.4rem;
+  }
+
+  .close-sidebar {
+    font-size: 3.2rem;
+    padding-bottom: 4.4rem;
+    font-weight: 700;
+  }
+
+  .main-nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+
+  .show-modal {
+    pointer-events: none;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #68707d;
+    padding: 1.8rem 0.8rem;
+    transition: all 0.3s;
+    border-bottom: #fff solid 2px;
+  }
+
+  .main-nav-link:hover,
+  .main-nav-link:active {
+    border-bottom: #ff7d1b solid 2px;
+  }
+
+  .hero-img-box {
+    width: auto;
+    padding: 0;
+  }
+
+  .hero-main-img {
+    width: 100vw;
+    height: 44rem;
+    border-radius: 0;
+  }
+
+  .hero-img-box ul {
+    display: none;
+  }
+
+  .hero-thumb-img,
+  .modal-thumb-img {
+    display: none;
+  }
+
+  .hero-text-box {
+    width: 100%;
+    margin-top: 2.4rem;
+    padding: 0;
+  }
+
+  .heading-primary {
+    padding-bottom: 0.2rem;
+  }
+
+  .hero-pricing-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero-description {
+    font-size: 1.8rem;
+    line-height: 1.8;
+  }
+
+  .price {
+    font-size: 3.6rem;
+  }
+
+  .price-discount {
+    font-size: 2.4rem;
+  }
+
+  .discount {
+    font-size: 2rem;
+    padding-right: 0.1px;
+  }
+
+  .hero-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 100%;
+    padding-bottom: 8rem;
+  }
+
+  .increate {
+    width: 100%;
+    font-size: 2.4rem;
+    padding: 2.4rem 2rem;
+    justify-content: space-around;
+  }
+
+  .add-to-cart {
+    width: 100%;
+    font-size: 2.4rem;
+    padding: 4rem 2rem;
+  }
+
+  .cart-item--popup {
+    width: 90vw;
+    border-radius: 1rem;
+    top: 150%;
+    left: -10%;
+  }
+
+  .popup-title {
+    font-size: 1.8rem;
+    padding: 2.2rem;
+  }
+
+  .cart-items--list {
+    padding: 3rem 2.4rem;
+    gap: 3rem;
+  }
+
+  .cart--items {
+    padding: 3rem 2.4rem;
+    gap: 0.5rem;
+  }
+
+  .cart-item--img {
+    height: 6.4rem;
+    width: 6.4rem;
+  }
+
+  .cart-item--info {
+    font-size: 2rem;
+    gap: 0.5rem;
+    width: 180px;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .cart-item--delete {
+    font-size: 2.4rem;
+  }
+
+  .check-out {
+    font-size: 1.8rem;
+    height: 6.4rem;
+  }
+}
