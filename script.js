@@ -1,18 +1,19 @@
-/* eslint-disable no-loop-func */
+/* eslint-disable func-names */
+/* eslint-disable no-plusplus */
 // Make Pop-up Menu appear when you hover profile and cart
 // 1. Select Profile and Cart
 const btnsShowPopup = document.querySelectorAll('.show-popup');
 const popup = document.querySelector('.cart-item--popup');
 
-const openPopup = () => {
+const openPopup = function () {
   popup.classList.remove('hidden');
 };
 
-const closePopup = () => {
+const closePopup = function () {
   popup.classList.add('hidden');
 };
 
-for (let i = 0; i < btnsShowPopup.length; i + 1) {
+for (let i = 0; i < btnsShowPopup.length; i++) {
   btnsShowPopup[i].addEventListener('click', () => {
     if (popup.classList.contains('hidden')) {
       openPopup();
@@ -33,22 +34,22 @@ const sidebar = document.querySelector('.side-bar');
 const sidebarBtn = document.querySelector('.side-bar-btn');
 const sidebarCloseBtn = document.querySelector('.close-sidebar');
 
-const openModal = () => {
+const openModal = function () {
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
 };
 
-const closeModel = () => {
+const closeModel = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
 };
 
-const openSideBar = () => {
+const openSideBar = function () {
   sidebar.classList.remove('hidden');
   overlay.classList.remove('hidden');
 };
 
-const closeSideBar = () => {
+const closeSideBar = function () {
   sidebar.classList.add('hidden');
   overlay.classList.add('hidden');
 };
@@ -75,10 +76,10 @@ const herothumbs = document.querySelectorAll('.hero-option-img');
 const heroThumbImgs = document.querySelectorAll('.hero-thumb-img');
 const heroImg = document.querySelector('.hero-main-img');
 
-for (let i = 0; i < 4; i + 1) {
+for (let i = 0; i < 4; i++) {
   herothumbs[i].addEventListener('click', () => {
     heroImg.src = `/images/image-product-${i + 1}.jpg`;
-    for (let j = 0; j < 4; j + 1) {
+    for (let j = 0; j < 4; j++) {
       herothumbs[j].classList.remove('border');
       heroThumbImgs[j].classList.remove('selected');
     }
@@ -97,8 +98,8 @@ let order = 1;
 
 nextBtn.addEventListener('click', () => {
   if (order >= 1 && order < 4) {
-    order += order;
-    for (let j = 0; j < 4; j + 1) {
+    order++;
+    for (let j = 0; j < 4; j++) {
       modalThumbs[j].classList.remove('border');
       thumbImg[j].classList.remove('selected');
       modalThumbs[j].style.transition = '0.3s';
@@ -111,8 +112,8 @@ nextBtn.addEventListener('click', () => {
 
 previousBtn.addEventListener('click', () => {
   if (order > 1 && order < 5) {
-    order -= order;
-    for (let j = 0; j < 4; j + 1) {
+    order--;
+    for (let j = 0; j < 4; j++) {
       modalThumbs[j].classList.remove('border');
       thumbImg[j].classList.remove('selected');
       modalThumbs[j].style.transition = '0.3s';
@@ -123,18 +124,18 @@ previousBtn.addEventListener('click', () => {
   }
 });
 
-for (let i = 0; i < 4; i + 1) {
-  modalThumbs[i].addEventListener('click', () => {
-    modalImg.src = `/images/image-product-${i + order}.jpg`;
+modalThumbs.forEach((thumb, index) => {
+  thumb.addEventListener('click', () => {
+    modalImg.src = `/images/image-product-${index + order}.jpg`;
     for (let j = 0; j < 4; j + 1) {
       modalThumbs[j].classList.remove('border');
       thumbImg[j].classList.remove('selected');
       modalThumbs[j].style.transition = '0.3s';
     }
-    modalThumbs[i].classList.add('border');
-    thumbImg[i].classList.add('selected');
+    modalThumbs[index].classList.add('border');
+    thumbImg[index].classList.add('selected');
   });
-}
+});
 
 // Add to cart
 const addToCart = document.querySelector('.add-to-cart');
@@ -153,7 +154,7 @@ let price = 125;
 let total = 0;
 
 const add = () => {
-  count += count;
+  count++;
   countOfAdded.textContent = count;
   cartItemCount.textContent = count;
   total = price * count;
@@ -172,14 +173,14 @@ const add = () => {
 
 const remove = () => {
   if (count > 1) {
-    count -= count;
+    count--;
     countOfAdded.textContent = count;
     cartItemCount.textContent = count;
     total -= price;
     itemPrice.textContent = `$125.00 x ${count} `;
     totalPrice.textContent = ` $${total}.00`;
   } else if (total === 125 && count === 1) {
-    count -= count;
+    count--;
     countOfAdded.textContent = count;
     cartItemCount.textContent = count;
     itemPrice.textContent = '$125.00';
